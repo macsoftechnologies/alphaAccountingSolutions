@@ -1,0 +1,15 @@
+MONGO_CONN_STRING = 'mongodb+srv://macsof:macsof@nextlevelcarwash.yjs3i.mongodb.net/Alpha_Traders?retryWrites=true&w=majority'
+
+PAYMENT_REDIRECT_URL = 'http://localhost:4200/myaccount/'
+
+#RAZOR_PAY__KEY_ID = 'rzp_live_0nnOVeghNXyKzt'
+
+#RAZOR_PAY_KEY_SECRET = 'rqzFvizeEfnNCjn59acyZiNc'
+
+
+RAZOR_PAY__KEY_ID = 'rzp_test_g3B1GIDOpUPmh0'
+
+RAZOR_PAY_KEY_SECRET = 'CpFXcMSRcSwXrGDBCsGXafPk'  
+
+
+

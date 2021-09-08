@@ -1,0 +1,104 @@
+CREATE TABLE AdminNotifications (
+    NotificationID int NOT NULL PRIMARY KEY,
+    Categories varchar(255),
+    Title varchar(255),
+    Message varchar(7000),
+    Image varchar(8000),
+	Video varchar(8000),
+	IsDraft bit DEFAULT '1',
+	ScheduledTime Date,
+	CreatedDate Date,
+	ModifiedDate Date,
+	IsDeleted bit DEFAULT '0'
+
+);
+
+DROP TABLE AdminNotifications
+
+CREATE TABLE Attachments(
+ AttachmentId int NOT NULL PRIMARY KEY,
+ Path varchar(50),
+ Type varchar(100),
+ CreatedBy int,
+ ModifiedBy int,
+ CreatedDate Date,
+ ModifiedDate Date,
+ IsDeleted bit DEFAULT '0',
+ );
+
+ CREATE TABLE UsersAuthentication(
+  AuthenticatonID int NOT NULL PRIMARY KEY,
+  UserID int,
+  Password varchar(30),
+  DeviceToken varchar(100),
+  DeviceType varchar(100),
+  DeviceVerion Varchar(30),
+  CreatedDate Date,
+  ModifiedDate Date,
+  IsDeleted bit DEFAULT '0',
+ );
+
+ CREATE TABLE Categories(
+ CategoryID int NOT NULL PRIMARY KEY,
+ Name varchar(35),
+ CreatedBy int,
+ ModifiedBy int,
+ CreatedDate Date,
+ Modifieddate Date,
+ IsDeleted bit DEFAULT '0'
+ );
+
+ CREATE TABLE Groups(
+ GroupID int NOT NULL PRIMARY KEY,
+ Name varchar(35),
+ Users varchar(35),
+ CreatedBy int,
+ ModifiedBy int,
+ Createddate Date,
+ ModifiedDate Date,
+ IsDeleted bit DEFAULT '0'
+ );
+
+ CREATE TABLE Notifications(
+ NotificationID varchar(30),
+ UserID varchar(40),
+ Title varchar(50),
+ Message varchar(50),
+ Image varchar(8000),
+ Video varchar(8000),
+ CreatedBy int,
+ ModifiedBy int,
+ CreatedDate Date,
+ ModifiedDate Date,
+ IsDeleted bit DEFAULT '0'
+ );
+
+ CREATE TABLE Subscriptions(
+ SubscriptionID int NOT NULL PRIMARY KEY,
+ CatergoryID int,
+ UserID int,
+ CreatedBy int,
+ ModifiedBy int,
+ CreatedDate Date,
+ ModifiedDate Date,
+ IsDeleted bit DEFAULT '0'
+ );
+
+ CREATE TABLE Users(
+ UserID int NOT NULL PRIMARY KEY,
+ Name varchar(35),
+ PhoneNumber varchar(15),
+ Email varchar(80),
+ Photo int,
+ Role varchar(25) DEFAULT 'employee'
+ );
+
+
+
+
+
+
+
+
+
+    
